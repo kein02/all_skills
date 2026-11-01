@@ -59,25 +59,38 @@ mkdir -p ~/.agents/skills && cp -r all_skills/readme-writer ~/.agents/skills/
 | 步骤 | 做什么 | 关键规则 |
 |---|---|---|
 | 1. 侦察仓库 | 读 package.json / pyproject.toml / tests / examples / CI 配置，建立"事实清单" | 每个事实必须有出处，**禁止编造** |
-| 2. 判断类型 | 按识别口诀归入 7 类之一（见下表） | 混合型按用户主要使用方式归类 |
+| 2. 判断类型 | 按两问口诀归入 18 类之一并定位角色（见下表） | 混合型按用户主要使用方式归类 |
 | 3. 套结构蓝图 | 按类型的成熟章节顺序定大纲 | 安装永远靠前，License 永远收尾 |
 | 4. 写作 | 按十条黄金原则成文 | 没证据的信息留 `<!-- TODO -->`，不瞎编 star 数/用户评价 |
 | 5. 自检 | 逐项过质检清单 | 相对链接、徽章 ≤5、渲染 <500 KiB、无文字墙 |
 | 6. 交付 | 写入 README.md 并报告 | 说明判断的类型与理由，列出待你补充的 TODO |
 
-### 支持的 7 种项目类型
+### 支持的 18 种项目类型
 
-判断口诀：**用户拿到手第一件事是什么？**
+两问口诀：① **读者拿到手第一件事是什么？**（定类型）② **README 要回答什么问题？**（定角色与篇幅——自足/入口/手册/枢纽/目录/索引/治理/名片）
 
-| 类型 | 拿到手第一件事 | 结构风格 | 参考项目 |
+| 分组 | 类型 | 拿到手第一件事 | 代表高星项目 |
 |---|---|---|---|
-| 库 / SDK | import 它 | 极简，≤100 行，学习内容全外链 | React、Vue |
-| CLI 工具 | 敲命令 | 完整安装 + 真实终端输出 + Troubleshooting | nvm、Ollama |
-| Web 应用 | 打开界面 | 产品落地页：Demo + 截图 + 部署步骤 | freeCodeCamp |
-| 框架 / 平台 | 建新项目 | 脚手架一行命令 + 生态目录 | TensorFlow |
-| 内容库 | 阅读 | README 即目录 + ⭐必看标记 | HowToCook、JavaGuide |
-| 学术复现 | 跑实验 | 复现命令表 + BibTeX 放前部 | ML 论文仓库 |
-| 插件 / 扩展 | 装进宿主 | 宿主兼容表 + 配置示例 | OMZ 插件 |
+| 代码与运行时 | 库 / SDK | import 它 | axios、React |
+| 代码与运行时 | 框架 / 平台 | 建新项目 | django、TensorFlow |
+| 代码与运行时 | 语言运行时 | 选版本装环境 | node |
+| 工具与应用 | CLI 工具 | 敲命令 | ripgrep、yt-dlp |
+| 工具与应用 | Self-hosted 应用 | 部署它 | immich |
+| 工具与应用 | 桌面/移动应用 | 下载安装 | localsend |
+| AI 与学术 | AI 模型 / AI 库 | 跑模型 | transformers、whisper |
+| AI 与学术 | AI 应用 | 我显卡能不能跑 | sd-webui |
+| AI 与学术 | 论文复现 | 复现到论文数字 | nanoGPT |
+| 内容与聚合 | 知识库 / 教程 | 开始阅读 | hello-algo、HowToCook |
+| 内容与聚合 | 学习路线图 | 点开路径 | developer-roadmap |
+| 内容与聚合 | awesome 聚合 | 检索找工具 | awesome-selfhosted |
+| 垂直场景 | 插件 / Agent Skill | 装进宿主 | superpowers |
+| 垂直场景 | 安全工具 | 授权测试 | sqlmap、sherlock |
+| 垂直场景 | 硬件 / 嵌入式 | 刷机 | Marlin |
+| 垂直场景 | 游戏 | 玩或编译 | Mindustry |
+| 垂直场景 | dotfiles / 配置 | 抄走自用 | mathiasbynens/dotfiles |
+| 垂直场景 | Profile 主页 | 认识你 | github-readme-stats 用户 |
+
+每种类型的完整结构蓝图（章节顺序、排版手法、注意事项）见 `references/project-types.md`；跨类型五条铁律（角色决定篇幅、越成熟越短、价值证明前置、警示内联、规模大上自动化）见 `references/principles.md`。均为按需加载，不占日常上下文。
 
 ## 文件结构
 

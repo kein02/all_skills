@@ -1,6 +1,6 @@
 ---
 name: readme-writer
-description: 为代码仓库生成或重写高质量 README，自动判断项目类型（库/CLI 工具/Web 应用/框架/内容库/学术复现/插件）并套用对应的高星项目结构。基于对 11 个 100k+ star 项目（React、Vue、Ollama、nvm、HowToCook 等）与 4 份权威指南（Awesome README、Standard Readme、Make a README、GitHub 官方文档）的调研。当用户想给项目写 README、生成说明文档、优化或重写现有 README、初始化 GitHub 仓库、准备开源发布，或抱怨"没人明白我的项目是干嘛的"时使用。触发词：写 readme、生成 README、README 怎么写、项目文档、仓库说明、开源准备。Use when the user asks to write, generate, improve, or rewrite a README, or prepare a repo for open-source release — even if they don't say "README" explicitly, as long as they want their GitHub project to present itself better.
+description: 为代码仓库生成或重写高质量 README，自动判断项目类型（库/工具/应用/AI/内容库/插件等 18 类）并套用对应的高星项目结构与角色定位。基于对 31 个高星仓库（React、Vue、axios、immich、yt-dlp、transformers、nanoGPT、hello-algo、superpowers、Marlin 等）与 4 份权威指南（Awesome README、Standard Readme、Make a README、GitHub 官方文档）的调研。当用户想给项目写 README、生成说明文档、优化或重写现有 README、初始化 GitHub 仓库、准备开源发布，或抱怨"没人明白我的项目是干嘛的"时使用。触发词：写 readme、生成 README、README 怎么写、项目文档、仓库说明、开源准备。Use when the user asks to write, generate, improve, or rewrite a README, or prepare a repo for open-source release — even if they don't say "README" explicitly, as long as they want their GitHub project to present itself better.
 ---
 
 # README Writer
@@ -28,9 +28,12 @@ description: 为代码仓库生成或重写高质量 README，自动判断项目
 
 ### 第 2 步：判断项目类型
 
-读 `references/project-types.md` 的识别信号表，判断属于七类中的哪一类：
+读 `references/project-types.md` 的识别信号表（18 类），用两问口诀定位：
 
-库/SDK、CLI/终端工具、Web 应用/独立软件、框架/平台、内容库/知识库、学术/算法复现、插件/扩展。
+1. **读者拿到手第一件事是什么？** → 决定类型（import→库；敲命令→CLI；部署→self-hosted；下载安装→应用；跑模型→AI；阅读→内容库；检索→awesome；装进宿主→插件；刷机→硬件……）
+2. **README 要回答什么问题？** → 决定角色与篇幅（自足/入口/手册/枢纽/目录/索引/治理/名片）
+
+完整清单：库/SDK、框架/平台、语言运行时、CLI 工具、Self-hosted 应用、桌面/移动应用、AI 模型与库、AI 应用、论文复现、知识库/教程、学习路线图、awesome 聚合、插件/Agent Skill、安全工具、硬件/嵌入式、游戏、dotfiles/配置、Profile 主页。
 
 混合型项目（如"既是库又带 CLI"）按用户的主要使用方式归类，结构可合并两型要点。在报告里用一两句话说明判断依据。
 
