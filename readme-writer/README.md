@@ -1,5 +1,7 @@
 # readme-writer
 
+[English](README.en.md) | 简体中文
+
 一个 Agent Skill：对 Agent 说一句话，它就为你的代码仓库自动写出"高星项目水准"的 README——先判断项目类型，再按对应的成熟结构写作，交付前自动过一遍质检清单。
 
 ![type](https://img.shields.io/badge/type-agent--skill-blue) ![scope](https://img.shields.io/badge/scope-personal-green)

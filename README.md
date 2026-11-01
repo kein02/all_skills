@@ -1,5 +1,7 @@
 # all_skills
 
+[English](README.en.md) | 简体中文
+
 个人在开发学习过程中总结的 Agent skills 集合（适用于 ZCode、Claude Code 等支持 Agent Skills 标准的工具）。每个 skill 一个独立目录，一条命令即可安装（见下）。
 
 ## 技能导引
@@ -39,4 +41,5 @@ mkdir -p ~/.agents/skills && cp -r all_skills/readme-writer ~/.agents/skills/
 - 文件夹名 = skill 名（小写 kebab-case）
 - 入口为 `SKILL.md`，YAML frontmatter 只需 `name` + `description`（description 写清"何时触发"，是自动触发的关键）
 - 长内容放 `references/`（按需读取）、脚本放 `scripts/`、模板放 `assets/`
+- 提供 `README.md`（中文说明）与 `README.en.md`（英文说明），两者标题下互放切换链接
 - 新增后在上方「技能导引」表格补一行
