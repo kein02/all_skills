@@ -14,14 +14,33 @@
 
 ## 安装
 
-把 `readme-writer/` 整个文件夹拷入 skills 目录即可，无其他依赖：
+不同 Agent 工具安装方式不同；如在多个工具中使用，请分别安装。以下任选一种：
 
-| 范围 | 路径 | 生效范围 |
-|---|---|---|
-| 个人级（推荐） | `~/.agents/skills/readme-writer/` | 所有项目可用 |
-| 项目级 | `<项目>/.agents/skills/readme-writer/` | 仅当前项目 |
+**一键脚本**（拷入 `~/.agents/skills/`，旧版自动备份）：
 
-适用于 ZCode、Claude Code 等支持 Agent Skills 标准（`SKILL.md` + YAML frontmatter）的工具。安装后新开会话生效。
+```bash
+curl -fsSL https://raw.githubusercontent.com/kein02/all_skills/main/install.sh | bash -s -- readme-writer
+```
+
+**社区 CLI**（skills.sh，支持多种 agent 工具）：
+
+```bash
+npx skills add kein02/all_skills -s readme-writer
+```
+
+**手动**（无其他依赖，项目级安装也用这种：放进 `<项目>/.agents/skills/` 即可）：
+
+```bash
+git clone --depth 1 https://github.com/kein02/all_skills
+mkdir -p ~/.agents/skills && cp -r all_skills/readme-writer ~/.agents/skills/
+```
+
+> [!IMPORTANT]
+> 安装后需**新开一个会话**才生效（skills 目录在会话启动时扫描），当前会话可用 `/readme-writer` 强制调用。
+
+**验证**：新会话里说一句"帮我给这个项目写个 README"，能自动进入工作流即安装成功。
+
+**更新**：重跑同一条安装命令（旧版自动备份为 `readme-writer.bak.<时间戳>`）。
 
 ## 使用方法
 
@@ -67,7 +86,8 @@ readme-writer/
 ├── SKILL.md                      # 入口：触发条件 + 6 步工作流（约 100 行）
 └── references/                   # 按需加载，不占日常上下文
     ├── project-types.md          # 类型识别信号表 + 7 套结构蓝图
-    └── principles.md             # 板块清单、十条原则、反模式、徽章速查、模板骨架
+    ├── principles.md             # 板块清单、十条原则、反模式、徽章速查、模板骨架
+    └── install-patterns.md       # 安装/分发板块写法速查（零摩擦七条 + 生态命令表）
 ```
 
 ## 定制

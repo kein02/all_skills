@@ -12,7 +12,7 @@
 | 框架 / 平台 | 提供脚手架或插件机制，用户在其上构建自己的项目；常有生态目录 | TensorFlow（平台型） |
 | 内容库 / 知识库 / awesome-list | README 几乎无代码，主体是分类链接目录；或 `awesome-*`、笔记/教程库 | HowToCook、JavaGuide、chinese-poetry |
 | 学术 / 算法复现 | 有论文引用、实验脚本、数据集下载说明、results/ 目录 | ML 论文仓库常见形态 |
-| 插件 / 扩展 | 依赖某个宿主（vscode 扩展、浏览器扩展、zsh 插件、loader）；有 marketplace 清单 | Oh My Zsh 的插件 |
+| 插件 / 扩展（含 Agent Skill） | 依赖某个宿主（vscode 扩展、浏览器扩展、zsh 插件、loader、Agent 工具）；有 marketplace 清单或 `SKILL.md` 入口 | Oh My Zsh 的插件、obra/superpowers |
 
 判断口诀：**用户拿到手第一件事是什么？** import 它 → 库；敲命令 → CLI；打开界面 → 应用；建新项目 → 框架；阅读 → 内容库；跑实验 → 学术；装进宿主 → 插件。
 
@@ -75,7 +75,7 @@
 5. 衍生作品 / 致谢
 6. License
 
-> 无安装章节，除非提供本地部署（如 HowToCook 的两行 Docker 命令）。
+> 无安装章节，除非提供本地部署（如 HowToCook 的两行 Docker 命令）。**skill 集合 / 可安装的条目类仓库例外：必须提供一键安装命令**（install.sh / `npx skills add`），见 `install-patterns.md`。
 
 ### 学术 / 算法复现
 
@@ -91,8 +91,10 @@
 
 1. 标题 + 宿主兼容版本表
 2. 一句话 + 效果截图/GIF
-3. 安装：marketplace 链接 + 手动安装两种方式
+3. 安装（**每宿主一小节**，目录锚点直达，superpowers 式）：官方 marketplace 一行命令 → fallback 渠道 → 通用 CLI 兜底 → 手动安装；开头一句话管理预期（多宿主需分别装）；装完给验证方法；"更新 = 重跑安装命令"有交代——模式速查见 `install-patterns.md`
 4. 配置示例：settings.json 等真实片段
 5. 命令 / 快捷键列表（表格）
 6. 兼容性与已知问题（诚实声明）
 7. Contributing、License
+
+> **Agent Skill 特例**：宿主是各 Agent 工具（ZCode / Claude Code 等）。安装渠道按优先级排列：宿主 marketplace 一行命令 → 社区 CLI（`npx skills add owner/repo -s <skill>`）→ 一键脚本（install.sh）→ 手动 clone + 拷贝。**必须给一句能触发该 skill 的验证 prompt**（如"说『帮我给这个项目写个 README』能自动进入工作流即装好了"），并交代"新开会话才生效"。完整模板见 `install-patterns.md`。

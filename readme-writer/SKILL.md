@@ -24,6 +24,7 @@ description: 为代码仓库生成或重写高质量 README，自动判断项目
 - 入口与用法：main 文件、CLI 参数解析、`examples/`、`tests/`（测试里的调用方式就是真实用法）
 - 生态信号：LICENSE 文件、`.github/workflows/`（CI 能力）、`docs/`、CHANGELOG、CONTRIBUTING、docker-compose、截图资源
 - 已有 README.md（若有）：**先读**。保留用户添加的链接、徽章、联系方式、打赏信息，改进结构而不是清空重来。
+- 分发渠道信号：发布到哪个 registry（npm/PyPI/crates…）、是否走 plugin/marketplace 机制（`.claude-plugin/`、`SKILL.md` 布局）、有无 install 脚本或预编译 releases——**安装节的写法必须与实际分发方式一致，没有发行渠道就先如实给 clone+构建路径**
 
 ### 第 2 步：判断项目类型
 
@@ -38,6 +39,7 @@ description: 为代码仓库生成或重写高质量 README，自动判断项目
 在 `references/project-types.md` 中找到该类型的章节蓝图，确定大纲。铁律：
 
 - 安装永远靠前，贡献与 License 永远收尾（License 必须是最后一节）
+- 安装节永远**一条可复制命令**首选；多平台/多宿主分区呈现，一个代码块只含一种环境；装完紧跟验证方法；更新方式有交代（模式速查见 `references/install-patterns.md`）
 - 内容只保留"上手所需"，其余外链或 `<details>` 折叠
 
 ### 第 4 步：写作
@@ -54,6 +56,7 @@ description: 为代码仓库生成或重写高质量 README，自动判断项目
 交付前逐项过：
 
 - [ ] 前 3 屏齐全：定位句 + 安装命令 + 演示
+- [ ] 安装节：一条可复制命令、与实际分发渠道一致、附验证方法；工具/插件类有更新交代
 - [ ] 无文字墙：bullet、表格、代码块调节奏
 - [ ] 仓库内链接全部是相对路径（fork/clone 后不断链）
 - [ ] License 是最后一节，且与 LICENSE 文件一致
