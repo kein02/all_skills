@@ -9,6 +9,7 @@
 | 技能 | 简介 |
 |---|---|
 | [readme-writer](readme-writer/README.md) | **README Writer**：为代码仓库自动生成"高星项目水准"的 README。基于对 31 个高星仓库（React、Vue、immich、yt-dlp、transformers、superpowers 等）与 4 份权威指南（Awesome README、Standard Readme、Make a README、GitHub 官方文档）的调研：自动判断项目类型（库 / 工具 / 应用 / AI / 内容库 / 插件等 18 类）并定位 README 角色，按类型套用对应的高星项目结构蓝图，遵守十条黄金原则写作，交付前过一遍自检清单。内置防编造护栏——README 中每个事实必须来自仓库实际内容。 |
+| [obsidian-auto](obsidian-auto/README.md) | **Obsidian Auto**：一句话给 Obsidian 建好 `raw/` + `wiki/` 三层知识库骨架（`AGENTS.md`/`README.md`/`index.md`/`log.md` 四件套），并按你指定的时间挂上「每日整理」「每周健康检查」两个定时任务；同一份技能可装进 12 个 Agent（Claude Code、Codex、Cursor、WorkBuddy 等），调度支持宿主自动化、cron、Windows 计划任务与 launchd。幂等：只补缺失，不覆盖已有文件；时间无默认值。 |
 
 → 点技能名进入其详细说明（解决什么问题、安装、触发方式、工作流程、定制方法）；每个 skill 文件夹内 SKILL.md 为 Agent 读取的入口，README.md 为人类阅读的使用文档。
 
