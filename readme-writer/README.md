@@ -52,7 +52,7 @@ mkdir -p ~/.agents/skills && cp -r all_skills/readme-writer ~/.agents/skills/
 - "我的 README 没人看得懂，帮我重写"
 - "我要开源这个项目，准备一下文档"
 
-**手动调用**——在 ZCode 中输入 `/readme-writer`（自动触发没反应时用它兜底）。
+**手动调用**——；如在部分Agent中输入 `/readme-writer`（自动触发没反应时用它兜底）。
 
 ## 工作流程
 
